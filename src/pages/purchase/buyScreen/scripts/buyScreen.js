@@ -1,5 +1,3 @@
-import DB from '../../../../server.js';
-
 function getDate() {
     const date = new Date();
     let day = date.getDate();
@@ -24,17 +22,18 @@ function makeid(length) {
     return result;
 }
 
-function createUserTicketDB() {
-  console.log("Batata");
-  DB.createUserTicket(makeid(6),getDate(),0,getModality());
-}
+function alertValues() {
+    var values = [makeid(8),getDate(),0,getModality()];
+    alert(values);
+    return values;
+  }
+
 
 function getType() {
     let selectType = document.querySelector('#tipo');
     let optionType = selectType.options[selectType.selectedIndex];
 
     var typeText = optionType.text;
-    alert(typeText);
     return typeText;
   }
 
@@ -43,7 +42,6 @@ function getModality() {
     let optionModality = selectModality.options[selectModality.selectedIndex];
 
     var modalityText = optionModality.text;
-    alert(modalityText);
     return modalityText;
   }
 

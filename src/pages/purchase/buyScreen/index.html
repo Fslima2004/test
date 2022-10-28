@@ -40,13 +40,13 @@
                         
                         <div class="content">
                             <div class="big_section">
-                                <form>
+                                <form action="/src/pages/purchase/rulesScreen/index.html">
                                     <div class="line">
                                         <div class="section">
                                             <p>Tipo de passe</p>
                                             <div>
                                                 <label for="tipo">
-                                                    <select id="tipo" onchange=select(this) required>
+                                                    <select id="tipo" onchange="select(this)" required>
                                                         <option value="unico">Bilhete Único</option>
                                                         <option value="duplo">Bilhete Duplo</option>
                                                         <option value="semanal">Bilhete Semanal</option>
@@ -95,11 +95,11 @@
                                             </div>   
                                         </div>
                                     </div>
-                                    
+                                    <div class="section">
+                                        <button id ='button' type="submit" onclick="alertValues()">Gerar</button>
+                                    </div>
                                 </form>
-                                <div class="section">
-                                    <button id ='button' onclick="createUserTicketDB()">Gerar</button>
-                                </div>
+                                
                                 
                                 
                                 
